@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="circle_progress_image_attrs">
+        <attr name="play_image" format="reference"/>
+        <attr name="stop_image" format="reference"/>
 
+    </declare-styleable>
 </resources>

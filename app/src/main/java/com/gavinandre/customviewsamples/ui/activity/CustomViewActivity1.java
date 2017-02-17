@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
  * Created by gavinandre on 17-2-17.
  */
 
-public class CustomView1 extends AppCompatActivity {
+public class CustomViewActivity1 extends AppCompatActivity {
     @BindView(R.id.xiuyixiu_button)
     ImageView mXiuyixiuButton;
     @BindView(R.id.cardview)
@@ -55,14 +55,14 @@ public class CustomView1 extends AppCompatActivity {
         mXiuyixiuButton.post(new Runnable() {
             @Override
             public void run() {
-                clickCircleView = new ClickCircleView(CustomView1.this, mXiuyixiuButton.getWidth()
+                clickCircleView = new ClickCircleView(CustomViewActivity1.this, mXiuyixiuButton.getWidth()
                         , mXiuyixiuButton.getHeight(), mXiuyixiuLayout.getMeasuredWidth(),
                         mXiuyixiuLayout.getMeasuredHeight());
                 clickCircleView.setVisibility(View.VISIBLE);
                 mXiuyixiuLayout.addView(clickCircleView);
                 mXiuyixiuLayout.postInvalidate();
                 // 加载动画
-                final Animator anim = AnimatorInflater.loadAnimator(CustomView1.this,
+                final Animator anim = AnimatorInflater.loadAnimator(CustomViewActivity1.this,
                         R.animator.circle_scale_animator);
                 anim.addListener(new AnimatorListenerAdapter() {
                     @Override
@@ -80,10 +80,10 @@ public class CustomView1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 clickCircleView.setVisibility(View.GONE);//发射圆圈，即将循环动画View隐藏
-                final ClickCircleView item = new ClickCircleView(CustomView1.this, mXiuyixiuButton.getWidth()
+                final ClickCircleView item = new ClickCircleView(CustomViewActivity1.this, mXiuyixiuButton.getWidth()
                         , mXiuyixiuButton.getHeight(), mXiuyixiuLayout.getWidth(),
                         mXiuyixiuLayout.getHeight());
-                Animator spreadAnim = AnimatorInflater.loadAnimator(CustomView1.this,
+                Animator spreadAnim = AnimatorInflater.loadAnimator(CustomViewActivity1.this,
                         R.animator.circle_spread_animator);
                 spreadAnim.addListener(new AnimatorListenerAdapter() {
                     @Override

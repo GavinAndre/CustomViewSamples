@@ -21,6 +21,12 @@
             android:layout_height="50dp"
             android:text="自定义View之咻一咻"/>
 
+        <TextView
+            android:id="@+id/custom_view2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="自定义View之音乐圆形进度条"/>
+
 
     </LinearLayout>
 
