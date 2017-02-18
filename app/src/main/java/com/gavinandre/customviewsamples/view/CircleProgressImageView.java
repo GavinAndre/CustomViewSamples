@@ -152,16 +152,22 @@ public class CircleProgressImageView extends View {
 
     public void setDuration(int duration) {
         this.mMaxProcessValue = duration;
+    }
+
+    public void clearDuration() {
+        this.mMaxProcessValue = 0;
         this.mProcessValue = 0;
     }
 
-    public void stop() {
+    public void pause() {
         isPlay = false;
         invalidate();
     }
 
-    public void complete(){
+    public void stop() {
         isPlay = false;
+        this.mMaxProcessValue = 0;
+        this.mProcessValue = 0;
         invalidate();
     }
 }
