@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.util.AttributeSet;
 import android.view.View;
 
 /**
@@ -17,12 +18,16 @@ public class ClickCircleView extends View {
     private Canvas canvas;
     private boolean isSpreadFlag = false;//标记是否发射完成
 
-    public boolean isSpreadFlag() {
-        return isSpreadFlag;
+    public ClickCircleView(Context context) {
+        this(context, null);
     }
 
-    public void setIsSpreadFlag(boolean isSpreadFlag) {
-        this.isSpreadFlag = isSpreadFlag;
+    public ClickCircleView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public ClickCircleView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
     }
 
     public ClickCircleView(Context context, int width, int height, int screenWidth, int screenHeight) {
@@ -37,6 +42,14 @@ public class ClickCircleView extends View {
         paint.setAlpha(50);
         canvas.drawCircle(screenWidth / 2, screenHeight / 2, width / 2 + 10, paint);
         invalidate();
+    }
+
+    public boolean isSpreadFlag() {
+        return isSpreadFlag;
+    }
+
+    public void setIsSpreadFlag(boolean isSpreadFlag) {
+        this.isSpreadFlag = isSpreadFlag;
     }
 
     @Override

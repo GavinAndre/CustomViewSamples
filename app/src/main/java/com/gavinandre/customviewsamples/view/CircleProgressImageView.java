@@ -24,31 +24,36 @@ public class CircleProgressImageView extends View {
 
     private static final String TAG = CircleProgressImageView.class.getSimpleName();
 
+    //表示坐标系中的一块矩形区域
     private RectF mRectF;
 
+    //画笔
     private Paint mPaint;
 
+    //画笔宽度
     private int mCircleStoreWidth = 3;
-    /**
-     * 最大进度值
-     */
+
+    //最大进度值
     private int mMaxProcessValue = 100;
-    /**
-     * 进度值
-     */
+
+    //进度值
     private int mProcessValue;
 
     private int width;
 
     private int height;
 
+    //播放器按钮id值
     private int bitmapPlay;
     private int bitmapStop;
 
+    //播放器按钮Bitmap对象
     private Bitmap drawBitmapPlay;
     private Bitmap drawBitmapStop;
 
     private Context context;
+
+    //标记是否正在播放中
     private boolean isPlay;
 
     public CircleProgressImageView(Context context) {
