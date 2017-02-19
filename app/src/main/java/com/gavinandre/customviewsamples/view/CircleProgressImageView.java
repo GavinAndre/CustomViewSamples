@@ -31,7 +31,7 @@ public class CircleProgressImageView extends View {
     private Paint mPaint;
 
     //画笔宽度
-    private int mCircleStoreWidth = 3;
+    private int mCircleStoreWidth = 5;
 
     //最大进度值
     private int mMaxProcessValue = 100;
@@ -114,11 +114,9 @@ public class CircleProgressImageView extends View {
         super.onDraw(canvas);
         canvas.drawColor(Color.TRANSPARENT);
         //画圆
-        mPaint.setColor(ContextCompat.getColor(context, R.color.orange));
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(mCircleStoreWidth);
-        //        canvas.drawArc(mRectF, -90, 360, false, mPaint);
-        mPaint.setColor(ContextCompat.getColor(context, R.color.gray));
+        mPaint.setColor(ContextCompat.getColor(context, R.color.red));
         canvas.drawArc(mRectF, -90, ((float) mProcessValue / mMaxProcessValue) * 360, false, mPaint);
         Log.d(TAG, ((float) mProcessValue / mMaxProcessValue) * 360 + "");
         float imageLeft = width / 2 - drawBitmapPlay.getWidth() / 2;

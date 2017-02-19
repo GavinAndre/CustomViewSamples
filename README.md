@@ -7,3 +7,5 @@
 ![](preview/xiuyixiu.gif)
 
 自定义View之音频播放圆形进度条[实现分析](http://blog.csdn.net/lj402159806/article/details/55803967)
+
+![](preview/circle_progress.gif)
