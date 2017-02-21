@@ -9,3 +9,6 @@
 自定义View之音频播放圆形进度条[实现分析](http://blog.csdn.net/lj402159806/article/details/55803967)
 
 ![](preview/circle_progress.gif)
+
+自定义SurfaceView之音频录制圆形进度条[实现分析](http://blog.csdn.net/lj402159806/article/details/56279143)
+![](preview/circle_record.gif)

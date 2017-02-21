@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".ui.activity.CustomViewActivity1"/>
         <activity android:name=".ui.activity.CustomViewActivity2"/>
+        <activity android:name=".ui.activity.CustomViewActivity3"/>
     </application>
 
 </manifest>

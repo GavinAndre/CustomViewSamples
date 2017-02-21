@@ -25,7 +25,13 @@
             android:id="@+id/custom_view2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="自定义View之音乐圆形进度条"/>
+            android:text="自定义View之音频播放圆形进度条"/>
+
+        <TextView
+            android:id="@+id/custom_view3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="自定义View之音频录制圆形进度条"/>
 
 
     </LinearLayout>

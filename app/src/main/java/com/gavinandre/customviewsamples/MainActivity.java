@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.gavinandre.customviewsamples.ui.activity.CustomViewActivity1;
 import com.gavinandre.customviewsamples.ui.activity.CustomViewActivity2;
+import com.gavinandre.customviewsamples.ui.activity.CustomViewActivity3;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     TextView mCustomView1;
     @BindView(R.id.custom_view2)
     TextView mCustomView2;
+    @BindView(R.id.custom_view3)
+    TextView mCustomView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.custom_view1, R.id.custom_view2})
+    @OnClick({R.id.custom_view1, R.id.custom_view2, R.id.custom_view3})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.custom_view1:
@@ -37,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.custom_view2:
                 Intent intent2 = new Intent(this, CustomViewActivity2.class);
                 startActivity(intent2);
+                break;
+            case R.id.custom_view3:
+                Intent intent3 = new Intent(this, CustomViewActivity3.class);
+                startActivity(intent3);
                 break;
         }
     }

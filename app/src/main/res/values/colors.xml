@@ -7,4 +7,7 @@
     <color name="red">#FF0000</color>
     <color name="gray">#A9A9A9</color>
     <color name="orange">#FF6600</color>
+
+    <color name="record_green">#59d1bf</color>
+
 </resources>
